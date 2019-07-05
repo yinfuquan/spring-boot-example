@@ -1,0 +1,20 @@
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/db-yfn?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 10
+      max-active: 1000
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 192.168.220.157
+    timeout: 5000
+    port: 6379
+server:
+  port: 8013

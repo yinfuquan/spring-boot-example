@@ -1,0 +1,13 @@
+spring:
+  data:
+    elasticsearch:
+      #jest的端口是9200
+      cluster-nodes: 192.168.220.172:9300
+      # 节点名称，默认为elasticsearch，如果docker安装的，这里是docker-cluster
+      # http://localhost:9200/_cluster/state 查看节点名称
+      cluster-name: docker-cluster
+
+#spring:
+#  elasticsearch:
+#    jest:
+#      uris: http://192.168.220.169:9200/

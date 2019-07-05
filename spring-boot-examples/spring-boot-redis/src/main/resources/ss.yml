@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+  es-master:
+    image:  elasticsearch:6.4.3
+    container_name: es-master
+    restart: always
+    environment:
+      JAVA_OPTS: " -Duser.home=/opt"
+      JAVA_OPT_EXT: "-server -Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+  elasticsearch-head:
+    image: wallbase/elasticsearch-head:6-alpine
+    container_name: elasticsearch-head
+    environment:
+      TZ: 'Asia/Shanghai'
+    ports:
+      - '9100:9100'
